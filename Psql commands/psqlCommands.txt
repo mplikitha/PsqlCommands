@@ -1,0 +1,41 @@
+PSQL commands
+--------------
+1. psql -U postgres -p 5432
+2. CREATE DATABASE testdb;
+3. \c testdb;
+------------------------------------------------------------------------
+4. CREATE TABLE users (id INTEGER PRIMARY KEY, name VARCHAR);
+					or
+	create table test (id integer, name varchar);
+---------------------------------------------------------------------	
+5. insert data into table
+	
+	a. INSERT INTO tb (id, name) VALUES (1,'appu');
+	
+	insert multiple data at once
+	
+	b. INSERT INTO tb (id, name) VALUES (1,'appu'),(2,'krishna');
+-----------------------------------------------------------------------	
+6. add extra column to existing table (alter table)
+
+	ALTER TABLE link ADD COLUMN last_update DATE;
+ 
+	ALTER TABLE link ALTER COLUMN last_update
+	SET DEFAULT CURRENT_DATE;
+	
+	======= insert data after alter
+	
+	INSERT INTO link (link, name, last_update)
+VALUES
+ ('http://www.facebook.com','Facebook','2013-06-01');
+	
+	
+-----------------------------------------------------------------------	
+7. select * from tb;
+	
+8. drop database and table
+
+	DROP DATABASE testdb;
+	 drop table tb;
+-----------------------------------------------------------------------	
+	
